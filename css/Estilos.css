@@ -1,0 +1,158 @@
+:root { /* es el contenedor de todas las variables en CSS, guardando colores y fuentes*/
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent-color: #38bdf8;
+    --border-color: #334155;
+
+    --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --transition-fast: 0.3s ease;
+}
+
+* { /* "*" es un selector universal que aplica lo que tenga dentro a todo el archivo html*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body { /* Es el cuerpo general de la pagina*/
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-main);  
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a { /* Enlaces e Hipervinculos de la pagina */
+    text-decoration: none;
+    color: inherit;
+}
+
+ul { /* Son las lsitas no ordenadas*/
+    list-style:none;
+}
+
+.header { /* Encabezado de la pagina */
+    position: fixed; /* Hace que la barra de navegacion se quede quieta mientras se hace scroll*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que el menu quede por encima de todo el contenido*/
+    background-color: rgba(15, 23, 42, 0.85); 
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav {
+    max-width: 1200px; /* Limita el ancho maximo de los bordes de la pantalla*/
+    margin: 0 auto; /* Centra la barra en la pantalla */
+    padding: 1.2rem 2rem; /* El espaciado interno hacia las 4 direcciones*/
+    display: flex; /* Modulo de diseño para alinear, distribuir y dimensionar elementos de forma flexible en un contenedor*/
+    justify-content:space-between; /* Pone el logo a la izquierda y menu derecha*/
+    align-items: center; /* Centra verticalmente el logo y los enlaces*/
+}
+
+.logo {
+    font-size: 1.3rem; /* "rem" es una unidad de medida cuyo tamaño depende del tamaño de la fuente definido, y significa "root EM"*/
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+}
+
+.nav-menu {
+    display: flex; /* Pone el menu ordenado*/
+    gap: 2rem /* Pone un espacio de separacion uniforme*/
+}
+
+.nav-menu a{
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+.nav-menu a:hover { /* Sirve para aplicar un color diferente cuando pasa el mouse por encima*/
+    color: var(--accent-color);
+}
+
+.hero {
+    min-height: 100vh; /* Hace que ocupe como minimo el 100% del alto de la pantalla, "vh" significa viewport height*/
+    display: flex;
+    align-items: center;
+    padding: 8rem 2rem 4rem;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;    
+}
+
+.greeting {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    font-weight:600;
+    margin-bottom: 0.5rem;
+}
+
+.name {
+    font-size: clamp(2.5rem, 5vw, 4 rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 0.8rem;
+    letter-spacing: -1px;
+}
+
+.role {
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    color: var(--text-secondary);
+    font-weight:600;
+    margin-bottom: 1.5rem;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    max-width: 650px;
+    text-align: justify;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem; /* Es la separacion entre los botones*/
+    flex-wrap: wrap; /* Si la pantalla es angosta los botones se acomodan uno debajo del otro*/
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--bg-primary);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px); /* Eleva el boton 3 pixeles hacia arriba al pasar el cursor*/
+    box-shadow: 0 10px 20px -10px var(--accent-color); /* Hace una sombra iluminosa*/
+}
+
+.btn-secondary {
+    border: 2px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    transform: translateY(-3px);
+}

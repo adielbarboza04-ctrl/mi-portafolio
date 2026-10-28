@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es"> <!--Le indica al navegador web que el idioma principal de la pagina es español y pueda ofrecer una mejor traduccion.-->
+
+<head>
+    <meta charset="UTF-8"> <!--"meta" proporciona informacion sobre el documento a los navegadores, "charset="UTF-8" es un interpretador de texto universal-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Indica al navegador que las instrucciones dentro del atributo seran visibles en pantalla, como el ancho y el zoom inicial.-->
+    <title>Adiel Barboza | Desarrollador de Software</title>
+
+    <link rel="stylesheet" href="css/Estilos.css"> <!--Enlace para el archivo css-->
+
+</head>
+<body>
+
+    <header class="header"> <!--Etiqueta para definir la cabecera principal del sitio web con un atributo que seria el identificador-->
+        <nav class="nav"> <!--Indica al navegador que ahi se encuentra el menu de navegacion principal-->
+            <a href="#" class="logo">Adiel Barboza</a> <!--"<a> es para crear enlaces e hipervinculos", atributo "href="#"" define el destino del enlace y # lleva el enlace hacia la parte superior de la pagina-->
+            <ul class="nav-menu"> <!--"<ul>" es una lista unordered, son listas sin numero, osea las que llevan viñetas o puntos-->
+                <li><a href="#sobre-mi">Sobre mí</a></li> <!--"<li>" significa list item y todo elemento dentro de un <ul> debe ir con un <li>-->
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <p class="greeting">Hola, soy</p> <!--<p> sirve para definir un parrafo-->
+                <h1 class="title">Adiel Barboza</h1> <!--<h1> Son las gerarquias de titulos en html-->
+                <h2 class="subtitle"> Estudiante de Ingeniería en Desarrollo de Software</h2>
+                <p class="description">
+                    Soy un apasionado por construir aplicaciones desde 0, creando una arquitectura de software limpia y agradable.
+                    Estoy Enfocado en crear y encontrar soluciones escalables con criterios de UI/UX Desing y normas ISO.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contacto" class="btn btn-primary">Contáctame</a>
+                    <a href="#proyectos" class="btn btn-secondary">Ver proyectos</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="sobre-mi">
+            <h2 class="section-title">Sobre mi</h2>
+            <div class="about-content">
+                <p>
+                    Actualmente me encuentro cursando la carrera de <strong>Ingeniería en Desarrollo de Sotware</strong> en la universidad Fidélitas
+                    Me apasiona entender programas desde dentro y creandolos yo mismo desde cero.
+                </p>
+                <p>
+                    Me enfoco en entender todo el codigo que creo, esto me sirve para estar en un aprendizaje continuo.
+                </p>
+            </div>
+        </section>
+
+        <section class="projects" id="proyectos">
+            <h2 class="section-title">Proyestos Destacados</h2>
+            <div class="projects grid">
+
+                <article class="tech-stack">
+                    <h3 class="project-title">Sistema de Matricula Universitaria</h3>
+                    <p class="project-description">
+                        Aplicacion de terminal para la gestión de matriculas, estudiantes y cursos. Conectada a una base de datos SQL y trabajo de codigo en Java.
+                    </p>
+                    <ul class="tech-stack">
+                        <li>Java</li>
+                        <li>MySQL</li>
+                        <li>NetBeans</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/adielbarboza04-ctrl" target="_blank" rel="noopener">Codigo en GitHub</a> <!--"target="_blank"" hace que el vinculo se abra en otra pestaña separada, "rel="noopener"" Es una medida de seguridad para que la pagina que se abrano tenga control a la web original-->
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <h3 class="project-title">Portafolio Web Personal</h3>
+                    <p class="project description">
+                        Sitio web diseñado desde cero por mi persona, para presentar mis proyectos academicos y personales.
+                    </p>
+                    <ul class="tech-stack">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <LI>Git & GitHub</LI>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/adielbarboza04-ctrl/mi-portafolio" target="_blank" rel="noopener">Codigo en GitHub</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="skills" id="habilidades">
+            <h2 class="section-title">Habilidades Técnicas</h2>
+            <div class="skills-container">
+                <h3>Lenguajes & Bases de Datos</h3>
+                <ul>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>MySQL</li>
+                    <li>HTML & CSS3</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Herramientas & Entornos</h3>
+                <ul>
+                    <li>Git & Github</li>
+                    <li>Linux / Ubunto</li>
+                    <li>Figma</li>
+                    <li>Visual Code</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="contact" id="contacto">
+            <h2 class="section-title">Contacto</h2>
+            <p>Quieres saber mas sobre mis proyectos o te gustaria conectar? Escribeme!</p>
+            <a href="mailto:adielbarboza@outlook.com" class="btn btn-primary">Enviar un correo</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Adiel Barboza</p>
+        <div class="social-links">
+            <a href="https://github.com/adielbarboza04-ctrl" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/adiel-barboza-53998a3a2/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+    </footer>
+
+</body>
+</html>
